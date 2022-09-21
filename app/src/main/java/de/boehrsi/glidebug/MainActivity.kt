@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        val url = "url"
+        val url = "https://github.com/Boehrsi/glide_heic_exif_bug/raw/main/files/IMG_0924.HEIC"
         val result = runBlocking(Dispatchers.IO) {
             val file = Glide.with(this@MainActivity).downloadOnly().load(url).submit()
             file.get()
